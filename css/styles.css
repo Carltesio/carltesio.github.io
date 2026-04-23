@@ -1,0 +1,222 @@
+:root {
+  --ink:      #111110;
+  --ink-mid:  #3a3935;
+  --ink-soft: #7a7870;
+  --ink-pale: #b8b5af;
+  --paper:    #f5f3ef;
+  --paper-2:  #eceae4;
+  --paper-3:  #e6e2db;
+  --rule:     rgba(17,17,16,0.10);
+
+  --font-serif: 'Cormorant', Georgia, serif;
+  --font-sans:  'Barlow', sans-serif;
+  --font-cond:  'Barlow Condensed', sans-serif;
+}
+
+/* il tuo CSS esistente va qui sopra, identico */
+
+/* ── CONNECT CTA ─────────────────────────────── */
+.contact-cta {
+  appearance: none;
+  border: 1px solid rgba(245,243,239,0.22);
+  background: rgba(245,243,239,0.08);
+  color: rgba(245,243,239,0.94);
+  font-family: var(--font-cond);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 11px 16px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  margin-left: auto;
+}
+
+.contact-cta:hover {
+  background: rgba(245,243,239,0.16);
+  border-color: rgba(245,243,239,0.34);
+}
+
+.connect-panel {
+  position: relative;
+  z-index: 11;
+  padding: 0 56px 44px;
+}
+
+.connect-panel[hidden] {
+  display: none;
+}
+
+.connect-panel-inner {
+  max-width: 760px;
+  margin-top: 18px;
+  background: rgba(20,20,18,0.82);
+  border: 1px solid rgba(245,243,239,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 28px;
+}
+
+.connect-kicker {
+  font-family: var(--font-cond);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(245,243,239,0.54);
+  margin-bottom: 8px;
+}
+
+.connect-title {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 300;
+  line-height: 1;
+  color: #f5f3ef;
+  margin-bottom: 12px;
+}
+
+.connect-copy {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(245,243,239,0.72);
+  margin-bottom: 24px;
+}
+
+.connect-form {
+  display: grid;
+  gap: 18px;
+}
+
+.connect-label {
+  display: block;
+  font-family: var(--font-cond);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(245,243,239,0.60);
+  margin-bottom: 10px;
+}
+
+.connect-input {
+  width: 100%;
+  border: 1px solid rgba(245,243,239,0.18);
+  background: rgba(245,243,239,0.06);
+  color: #f5f3ef;
+  padding: 14px 16px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 300;
+  outline: none;
+}
+
+.connect-input::placeholder {
+  color: rgba(245,243,239,0.38);
+}
+
+.connect-input:focus {
+  border-color: rgba(245,243,239,0.38);
+}
+
+.connect-fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.topic-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.topic-options input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topic-pill {
+  border: 1px solid rgba(245,243,239,0.16);
+  padding: 11px 14px;
+  font-family: var(--font-cond);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(245,243,239,0.80);
+  background: rgba(245,243,239,0.04);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.topic-pill:hover {
+  border-color: rgba(245,243,239,0.32);
+  background: rgba(245,243,239,0.10);
+}
+
+.topic-options input[type="radio"]:checked + .topic-pill {
+  background: rgba(245,243,239,0.92);
+  color: #111110;
+  border-color: rgba(245,243,239,1);
+}
+
+.connect-send {
+  justify-self: start;
+  appearance: none;
+  border: 1px solid rgba(245,243,239,0.30);
+  background: rgba(245,243,239,0.92);
+  color: #111110;
+  padding: 12px 18px;
+  font-family: var(--font-cond);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.connect-send:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.connect-send:disabled {
+  opacity: 0.36;
+  cursor: not-allowed;
+}
+
+@media (max-width: 860px) {
+  .contact-cta {
+    margin-left: 0;
+  }
+
+  .connect-panel {
+    padding: 0 28px 28px;
+  }
+
+  .connect-panel-inner {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  .topic-options {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .connect-send {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
