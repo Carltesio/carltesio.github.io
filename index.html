@@ -1,232 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carlos Delgado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
-    <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 
 </head>
+
 <body>
 
-<!-- ══════════════════════════════════════════════
+  <!-- ══════════════════════════════════════════════
      SECTION 1 — HERO + CONTACT
 ══════════════════════════════════════════════ -->
-<section class="hero" id="home">
+  <section class="hero" id="home">
 
 
-  <div class="hero-bg">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-         viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <filter id="grain" x="0%" y="0%" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="4"
-                        stitchTiles="stitch" result="noise"/>
-          <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
-          <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="blended"/>
-          <feComposite in="blended" in2="SourceGraphic" operator="in"/>
-        </filter>
-        <filter id="softBlur">
-          <feGaussianBlur stdDeviation="0.8"/>
-        </filter>
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="3" result="b"/>
-          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
+    <div class="hero-bg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 900"
+        preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.68" numOctaves="4" stitchTiles="stitch" result="noise" />
+            <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise" />
+            <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="blended" />
+            <feComposite in="blended" in2="SourceGraphic" operator="in" />
+          </filter>
+          <filter id="softBlur">
+            <feGaussianBlur stdDeviation="0.8" />
+          </filter>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
 
 
-        <radialGradient id="bg" cx="52%" cy="35%" r="72%">
-          <stop offset="0%"   stop-color="#555550"/>
-          <stop offset="50%"  stop-color="#222220"/>
-          <stop offset="100%" stop-color="#080807"/>
-        </radialGradient>
+          <radialGradient id="bg" cx="52%" cy="35%" r="72%">
+            <stop offset="0%" stop-color="#555550" />
+            <stop offset="50%" stop-color="#222220" />
+            <stop offset="100%" stop-color="#080807" />
+          </radialGradient>
 
 
-        <pattern id="weave" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
-          <line x1="0" y1="3"  x2="12" y2="3"  stroke="rgba(255,255,255,0.065)" stroke-width="1.2"/>
-          <line x1="0" y1="9"  x2="12" y2="9"  stroke="rgba(255,255,255,0.035)" stroke-width="0.6"/>
-          <line x1="3" y1="0"  x2="3"  y2="12" stroke="rgba(255,255,255,0.065)" stroke-width="1.2"/>
-          <line x1="9" y1="0"  x2="9"  y2="12" stroke="rgba(255,255,255,0.035)" stroke-width="0.6"/>
-        </pattern>
+          <pattern id="weave" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="3" x2="12" y2="3" stroke="rgba(255,255,255,0.065)" stroke-width="1.2" />
+            <line x1="0" y1="9" x2="12" y2="9" stroke="rgba(255,255,255,0.035)" stroke-width="0.6" />
+            <line x1="3" y1="0" x2="3" y2="12" stroke="rgba(255,255,255,0.065)" stroke-width="1.2" />
+            <line x1="9" y1="0" x2="9" y2="12" stroke="rgba(255,255,255,0.035)" stroke-width="0.6" />
+          </pattern>
 
 
-        <pattern id="pcb" x="0" y="0" width="90" height="90" patternUnits="userSpaceOnUse">
-          <line x1="0"  y1="22" x2="35" y2="22" stroke="rgba(255,255,255,0.11)" stroke-width="1"/>
-          <line x1="55" y1="22" x2="90" y2="22" stroke="rgba(255,255,255,0.11)" stroke-width="1"/>
-          <line x1="0"  y1="68" x2="22" y2="68" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-          <line x1="46" y1="68" x2="90" y2="68" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-          <line x1="35" y1="0"  x2="35" y2="45" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
-          <line x1="55" y1="45" x2="55" y2="90" stroke="rgba(255,255,255,0.09)" stroke-width="1"/>
-          <line x1="22" y1="45" x2="46" y2="45" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-          <circle cx="35" cy="22" r="3.5" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
-          <circle cx="55" cy="22" r="3.5" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
-          <circle cx="22" cy="68" r="3" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
-          <circle cx="46" cy="68" r="3" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1"/>
-          <circle cx="35" cy="45" r="2.5" fill="rgba(255,255,255,0.20)"/>
-          <circle cx="55" cy="45" r="2.5" fill="rgba(255,255,255,0.20)"/>
-        </pattern>
-      </defs>
+          <pattern id="pcb" x="0" y="0" width="90" height="90" patternUnits="userSpaceOnUse">
+            <line x1="0" y1="22" x2="35" y2="22" stroke="rgba(255,255,255,0.11)" stroke-width="1" />
+            <line x1="55" y1="22" x2="90" y2="22" stroke="rgba(255,255,255,0.11)" stroke-width="1" />
+            <line x1="0" y1="68" x2="22" y2="68" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <line x1="46" y1="68" x2="90" y2="68" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <line x1="35" y1="0" x2="35" y2="45" stroke="rgba(255,255,255,0.09)" stroke-width="1" />
+            <line x1="55" y1="45" x2="55" y2="90" stroke="rgba(255,255,255,0.09)" stroke-width="1" />
+            <line x1="22" y1="45" x2="46" y2="45" stroke="rgba(255,255,255,0.07)" stroke-width="1" />
+            <circle cx="35" cy="22" r="3.5" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1" />
+            <circle cx="55" cy="22" r="3.5" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1" />
+            <circle cx="22" cy="68" r="3" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1" />
+            <circle cx="46" cy="68" r="3" fill="none" stroke="rgba(255,255,255,0.13)" stroke-width="1" />
+            <circle cx="35" cy="45" r="2.5" fill="rgba(255,255,255,0.20)" />
+            <circle cx="55" cy="45" r="2.5" fill="rgba(255,255,255,0.20)" />
+          </pattern>
+        </defs>
 
 
-      <rect width="1440" height="900" fill="url(#bg)"/>
+        <rect width="1440" height="900" fill="url(#bg)" />
 
 
-      <rect x="0" y="0" width="640" height="900" fill="url(#weave)" opacity="0.95"/>
+        <rect x="0" y="0" width="640" height="900" fill="url(#weave)" opacity="0.95" />
 
 
-      <rect x="640" y="0" width="800" height="900" fill="url(#pcb)" opacity="0.90"/>
+        <rect x="640" y="0" width="800" height="900" fill="url(#pcb)" opacity="0.90" />
 
 
-      <g filter="url(#glow)" opacity="0.48">
-        <polyline
-          points="
+        <g filter="url(#glow)" opacity="0.48">
+          <polyline points="
             40,570 100,568 150,530 200,595
             250,508 300,582 360,522 430,568
             490,488 560,558 620,502 690,556
             750,476 820,548 890,468 960,544
             1030,472 1100,548 1170,462 1240,540
-            1310,470 1380,542 1440,476"
-          fill="none" stroke="rgba(255,255,255,0.32)"
-          stroke-width="1.6" stroke-linejoin="round"/>
-      </g>
+            1310,470 1380,542 1440,476" fill="none" stroke="rgba(255,255,255,0.32)" stroke-width="1.6"
+            stroke-linejoin="round" />
+        </g>
 
 
-      <g opacity="0.16">
-        <polyline
-          points="
+        <g opacity="0.16">
+          <polyline points="
             0,620 90,618 160,592 240,636
             310,572 390,628 460,568 540,622
             620,558 710,614 790,550 880,608
             960,545 1050,602 1130,540 1220,598
-            1310,536 1440,592"
-          fill="none" stroke="rgba(255,255,255,0.55)"
-          stroke-width="0.9" stroke-linejoin="round"/>
-      </g>
+            1310,536 1440,592" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="0.9"
+            stroke-linejoin="round" />
+        </g>
 
 
-      <g transform="translate(1020,130)" opacity="0.11" filter="url(#softBlur)">
-        <circle cx="0" cy="0" r="24" fill="none" stroke="white" stroke-width="1.5"/>
-        <line x1="0" y1="24" x2="0" y2="96" stroke="white" stroke-width="1.5"/>
-        <line x1="-40" y1="42" x2="40" y2="42" stroke="white" stroke-width="1.5"/>
-        <line x1="-40" y1="42" x2="-58" y2="86" stroke="white" stroke-width="1.5"/>
-        <line x1="-58" y1="86" x2="-44" y2="126" stroke="white" stroke-width="1.5"/>
-        <line x1="40" y1="42" x2="64" y2="78" stroke="white" stroke-width="1.5"/>
-        <line x1="64" y1="78" x2="54" y2="120" stroke="white" stroke-width="1.5"/>
-        <line x1="-28" y1="96" x2="28" y2="96" stroke="white" stroke-width="1.5"/>
-        <line x1="-18" y1="96" x2="-40" y2="158" stroke="white" stroke-width="1.5"/>
-        <line x1="-40" y1="158" x2="-52" y2="218" stroke="white" stroke-width="1.5"/>
-        <line x1="18" y1="96" x2="46" y2="158" stroke="white" stroke-width="1.5"/>
-        <line x1="46" y1="158" x2="40" y2="218" stroke="white" stroke-width="1.5"/>
-        <line x1="-52" y1="218" x2="-28" y2="218" stroke="white" stroke-width="1.5"/>
-        <line x1="28" y1="218" x2="54" y2="218" stroke="white" stroke-width="1.5"/>
-      </g>
+        <g transform="translate(1020,130)" opacity="0.11" filter="url(#softBlur)">
+          <circle cx="0" cy="0" r="24" fill="none" stroke="white" stroke-width="1.5" />
+          <line x1="0" y1="24" x2="0" y2="96" stroke="white" stroke-width="1.5" />
+          <line x1="-40" y1="42" x2="40" y2="42" stroke="white" stroke-width="1.5" />
+          <line x1="-40" y1="42" x2="-58" y2="86" stroke="white" stroke-width="1.5" />
+          <line x1="-58" y1="86" x2="-44" y2="126" stroke="white" stroke-width="1.5" />
+          <line x1="40" y1="42" x2="64" y2="78" stroke="white" stroke-width="1.5" />
+          <line x1="64" y1="78" x2="54" y2="120" stroke="white" stroke-width="1.5" />
+          <line x1="-28" y1="96" x2="28" y2="96" stroke="white" stroke-width="1.5" />
+          <line x1="-18" y1="96" x2="-40" y2="158" stroke="white" stroke-width="1.5" />
+          <line x1="-40" y1="158" x2="-52" y2="218" stroke="white" stroke-width="1.5" />
+          <line x1="18" y1="96" x2="46" y2="158" stroke="white" stroke-width="1.5" />
+          <line x1="46" y1="158" x2="40" y2="218" stroke="white" stroke-width="1.5" />
+          <line x1="-52" y1="218" x2="-28" y2="218" stroke="white" stroke-width="1.5" />
+          <line x1="28" y1="218" x2="54" y2="218" stroke="white" stroke-width="1.5" />
+        </g>
 
 
-      <g transform="translate(320,260)" opacity="0.28">
-        <circle cx="0" cy="0" r="16" fill="none" stroke="white" stroke-width="1.2"/>
-        <circle cx="0" cy="0" r="6" fill="rgba(255,255,255,0.65)"/>
-        <line x1="19" y1="-10" x2="34" y2="-18" stroke="white" stroke-width="0.9" opacity="0.7"/>
-        <line x1="22" y1="0" x2="40" y2="0" stroke="white" stroke-width="0.9" opacity="0.5"/>
-        <line x1="19" y1="10" x2="34" y2="18" stroke="white" stroke-width="0.9" opacity="0.3"/>
-        <line x1="-16" y1="0" x2="-64" y2="0" stroke="white" stroke-width="0.7" opacity="0.35"/>
-        <line x1="-64" y1="0" x2="-64" y2="52" stroke="white" stroke-width="0.7" opacity="0.25"/>
-        <line x1="-64" y1="52" x2="-20" y2="52" stroke="white" stroke-width="0.7" opacity="0.15"/>
-        <rect x="-72" y="8" width="16" height="10" fill="none"
-              stroke="rgba(255,255,255,0.12)" stroke-width="0.6" rx="1"/>
-      </g>
+        <g transform="translate(320,260)" opacity="0.28">
+          <circle cx="0" cy="0" r="16" fill="none" stroke="white" stroke-width="1.2" />
+          <circle cx="0" cy="0" r="6" fill="rgba(255,255,255,0.65)" />
+          <line x1="19" y1="-10" x2="34" y2="-18" stroke="white" stroke-width="0.9" opacity="0.7" />
+          <line x1="22" y1="0" x2="40" y2="0" stroke="white" stroke-width="0.9" opacity="0.5" />
+          <line x1="19" y1="10" x2="34" y2="18" stroke="white" stroke-width="0.9" opacity="0.3" />
+          <line x1="-16" y1="0" x2="-64" y2="0" stroke="white" stroke-width="0.7" opacity="0.35" />
+          <line x1="-64" y1="0" x2="-64" y2="52" stroke="white" stroke-width="0.7" opacity="0.25" />
+          <line x1="-64" y1="52" x2="-20" y2="52" stroke="white" stroke-width="0.7" opacity="0.15" />
+          <rect x="-72" y="8" width="16" height="10" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"
+            rx="1" />
+        </g>
 
 
-      <g opacity="0.20">
-        <circle cx="800" cy="345" r="2.5" fill="white"/>
-        <circle cx="834" cy="312" r="2" fill="white"/>
-        <circle cx="862" cy="332" r="3" fill="white"/>
-        <circle cx="896" cy="296" r="2" fill="white"/>
-        <circle cx="928" cy="318" r="2.5" fill="white"/>
-        <circle cx="964" cy="282" r="3" fill="white"/>
-        <circle cx="998" cy="306" r="2" fill="white"/>
-        <circle cx="1034" cy="272" r="2.5" fill="white"/>
-        <circle cx="1068" cy="295" r="2" fill="white"/>
-        <line x1="800" y1="345" x2="1068" y2="272"
-              stroke="white" stroke-width="0.6"
-              stroke-dasharray="5 4" opacity="0.45"/>
-      </g>
+        <g opacity="0.20">
+          <circle cx="800" cy="345" r="2.5" fill="white" />
+          <circle cx="834" cy="312" r="2" fill="white" />
+          <circle cx="862" cy="332" r="3" fill="white" />
+          <circle cx="896" cy="296" r="2" fill="white" />
+          <circle cx="928" cy="318" r="2.5" fill="white" />
+          <circle cx="964" cy="282" r="3" fill="white" />
+          <circle cx="998" cy="306" r="2" fill="white" />
+          <circle cx="1034" cy="272" r="2.5" fill="white" />
+          <circle cx="1068" cy="295" r="2" fill="white" />
+          <line x1="800" y1="345" x2="1068" y2="272" stroke="white" stroke-width="0.6" stroke-dasharray="5 4"
+            opacity="0.45" />
+        </g>
 
 
-      <g opacity="0.035">
-        <line x1="0" y1="180" x2="1440" y2="180" stroke="white" stroke-width="1"/>
-        <line x1="0" y1="360" x2="1440" y2="360" stroke="white" stroke-width="1"/>
-        <line x1="0" y1="540" x2="1440" y2="540" stroke="white" stroke-width="1"/>
-        <line x1="0" y1="720" x2="1440" y2="720" stroke="white" stroke-width="1"/>
-      </g>
+        <g opacity="0.035">
+          <line x1="0" y1="180" x2="1440" y2="180" stroke="white" stroke-width="1" />
+          <line x1="0" y1="360" x2="1440" y2="360" stroke="white" stroke-width="1" />
+          <line x1="0" y1="540" x2="1440" y2="540" stroke="white" stroke-width="1" />
+          <line x1="0" y1="720" x2="1440" y2="720" stroke="white" stroke-width="1" />
+        </g>
 
 
-      <rect width="1440" height="900"
-            fill="rgba(0,0,0,0.08)" filter="url(#grain)" opacity="0.45"/>
-    </svg>
-  </div>
-
-  <div class="hero-veil"></div>
-
-
-  <nav class="hero-nav">
-    <span class="hero-nav-name">Carlos Delgado</span>
-    <ul class="hero-nav-links">
-      <li><a href="mailto:carlos.delgado@hotmail.it">Contact</a></li>
-    </ul>
-  </nav>
-
-
-  <div class="hero-body">
-    <p class="hero-eyebrow">Senior Software Developer &nbsp;/&nbsp; Wearable &amp; Med-Tech</p>
-    <h1 class="hero-name">
-      Carlos<br><em>Delgado</em>
-    </h1>
-    <div class="hero-rule"></div>
-    <p class="hero-tagline">
-      Wearable technology, digital health &amp; enterprise software
-    </p>
-  </div>
-
-
-  <div class="hero-contact">
-    <a href="https://www.linkedin.com/in/carlosomardelgado/"
-       target="_blank" rel="noopener noreferrer" class="contact-item">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        <rect width="1440" height="900" fill="rgba(0,0,0,0.08)" filter="url(#grain)" opacity="0.45" />
       </svg>
-      LinkedIn
-    </a>
+    </div>
 
-    <a href="https://github.com/Carltesio"
-       target="_blank" rel="noopener noreferrer" class="contact-item">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-      </svg>
-      GitHub
-    </a>
+    <div class="hero-veil"></div>
 
-    <a href="mailto:carlos.delgado@hotmail.it" class="contact-item">
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24"
-           stroke="currentColor" stroke-width="1.6">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-      </svg>
-      carlos.delgado@hotmail.it
-    </a>
-  </div>
+    <nav class="hero-nav">
+      <span class="hero-nav-name">Carlos Delgado</span>
 
-</section>
+      <ul class="hero-nav-links">
+        <li>
+          <a href="mailto:carlos.delgado@hotmail.it">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-<footer>
-  <span class="footer-name">Carlos Delgado</span>
-  <span class="footer-copy">© 2026</span>
-</footer>
+    <div class="hero-center">
 
-<script src="script.js" defer></script>
+      <!-- GROUP 1: PHOTO -->
+      <img src="image.png" alt="Carlos Delgado" class="hero-photo" />
+
+      <!-- GROUP 2: TITLES -->
+      <div class="hero-body">
+
+        <p class="hero-eyebrow">
+          Senior Software Developer
+          &nbsp;/&nbsp;
+          Wearable &amp; Med-Tech
+        </p>
+
+        <h1 class="hero-name">
+          Carlos<br>
+          <em>Delgado</em>
+        </h1>
+
+        <div class="hero-rule"></div>
+
+        <p class="hero-tagline">
+          Wearable technology, digital health &amp;
+          enterprise software
+        </p>
+
+      </div>
+
+      <!-- GROUP 3: CONTACTS -->
+      <div class="hero-contact">
+
+        <a href="https://www.linkedin.com/in/carlosomardelgado/" target="_blank" rel="noopener noreferrer"
+          class="contact-item">
+
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+
+          LinkedIn
+
+        </a>
+
+        <a href="https://github.com/Carltesio" target="_blank" rel="noopener noreferrer" class="contact-item">
+
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+
+          GitHub
+
+        </a>
+
+        <a href="mailto:carlos.delgado@hotmail.it" class="contact-item">
+
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+
+          carlos.delgado@hotmail.it
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <span class="footer-name">Carlos Delgado</span>
+    <span class="footer-copy">© 2026</span>
+  </footer>
+
+  <script src="script.js" defer></script>
 
 
 </body>
